@@ -1,0 +1,67 @@
+{
+  "name": "openpocket",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "NODE_ENV=development next build",
+    "build:analyze": "ANALYZE=true next build",
+    "build:staging": "STAGING=1 next build",
+    "build:production": "next build",
+    "start": "next start",
+    "export": "next export --outdir ./dist",
+    "lint": "eslint --ext .tsx,.ts,.js .",
+    "lint:fix": "eslint --ext .tsx,.ts,.js --fix .",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "type-check-watch": "tsc -p ./src --watch",
+    "type-check": "tsc -p ./src",
+    "pretty-quick": "pretty-quick --staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm-run-all pretty-quick type-check test"
+    }
+  },
+  "dependencies": {
+    "@next/bundle-analyzer": "^9.1.4",
+    "@types/react": "^16.9.13",
+    "next": "^9.1.4",
+    "next-images": "^1.2.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.12",
+    "typescript": "^3.7.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
+    "eslint": "^6.4.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-config-react-app": "^5.0.2",
+    "eslint-plugin-flowtype": "^3.13.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "husky": "^3.0.5",
+    "jest": "^24.9.0",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "@typescript-eslint/eslint-plugin": "^2.3.0",
+    "@typescript-eslint/parser": "^2.3.0",
+    "@testing-library/jest-dom": "^4.1.0",
+    "@testing-library/react": "^9.1.4",
+    "@testing-library/user-event": "^7.0.1",
+    "@types/jest": "^24.0.18",
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0"
+  }
+}
