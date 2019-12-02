@@ -1,3 +1,5 @@
+<img src="./open-pocket.png" align="center">
+<br />
 <div  align="center" >
 <sub><a  href="[https://github.com/OpenPocket/](https://github.com/OpenPocket/client-ui)">Open Pocket</a></sub>
 </div>
