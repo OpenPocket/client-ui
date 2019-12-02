@@ -1,9 +1,20 @@
 {
-  "presets": ["next/babel"],
-  "plugins": ["@babel/plugin-syntax-dynamic-import"],
-  "env": {
-    "test": {
-      "plugins": ["dynamic-import-node"]
-    }
-  }
+	"presets": ["next/babel", "@zeit/next-typescript/babel"],
+	"plugins": [
+		[
+			"module-resolver",
+			{
+				"root": ["./"],
+				"alias": {
+					"@Actions": "./src/Actions",
+					"@Components": "./src/Components",
+					"@Definitions": "./src/Definitions",
+					"@Interfaces": "./src/Interfaces",
+					"@Reducers": "./src/Redux/Reducers",
+					"@Redux": "./src/Redux",
+					"@Services": "./src/Services"
+				}
+			}
+		]
+	]
 }
