@@ -1,0 +1,13 @@
+.hero {
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	min-height: 500px;
+	background: #FFF;
+	
+	h1 {
+		font-size: 6em;
+		margin: 0 90px;
+		text-align: center;
+	}
+}
