@@ -6,10 +6,7 @@ export type OrganizationLdProps = {
   logo?: string;
 };
 
-export const OrganizationLd = ({
-  url = 'https://www.instacarro.com/',
-  logo = 'https://cdn5.instacarro.com/sellers_home_3/mobile/Instacarro_logo.png',
-}: OrganizationLdProps) => {
+export const OrganizationLd = ({ url = 'url', logo = 'logo url' }: OrganizationLdProps) => {
   const jsonld = `{
     "@context": "http://schema.org/",
     "@type": "Organization",

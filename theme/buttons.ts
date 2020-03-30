@@ -1,5 +1,4 @@
 import { colors } from './colors';
-import { darken, opacify } from 'polished';
 const hoverSelector = ':hover:not(:disabled)';
 
 const buttonStyles = {
@@ -20,39 +19,12 @@ export const buttons = {
     ...buttonStyles,
     background: colors.gray100,
     [hoverSelector]: {
-      backgroundColor: opacify(0.05, colors.gray100),
+      backgroundColor: colors.gray100,
     },
   },
   primary: {
     ...buttonStyles,
-    background: `linear-gradient(to right, ${colors.blue200} 0%, ${colors.green500}  50%)`,
-    backgroundSize: '200% 100%',
-    backgroundPosition: '10% 0%',
+    background: colors.blue500,
     color: 'white',
-    [hoverSelector]: {
-      backgroundPosition: '100% 0%',
-    },
-  },
-  solid: {
-    ...buttonStyles,
-    color: 'white',
-    backgroundColor: colors.blue500,
-    [hoverSelector]: {
-      backgroundColor: darken(0.05, colors.blue500),
-    },
-  },
-  clear: {
-    ...buttonStyles,
-    backgroundColor: 'transparent',
-  },
-  outline: {
-    ...buttonStyles,
-    color: 'gray200',
-    backgroundColor: 'transparent',
-    border: '1px solid',
-    borderColor: colors.gray100,
-    [hoverSelector]: {
-      backgroundColor: colors.gray100,
-    },
   },
 };

@@ -1,9 +1,7 @@
 import React, { InputHTMLAttributes, ReactNode } from 'react';
-import { Flex, Box, Text, BaseProps, BoxProps } from 'rebass';
+import { Flex, Box, BaseProps, BoxProps } from 'rebass';
 import { FaSortDown } from 'react-icons/fa';
 import MaskedInput from 'react-text-mask';
-
-import { Spinner } from './';
 
 type Theme = import('../theme').themeProptypes;
 
@@ -72,26 +70,12 @@ export const Input = ({
 }: InputProps) => {
   return (
     <Box>
-      <Switcher
-        data-testid="input"
-        tag={tag}
-        disabled={disabled || isLoading}
-        name={name}
-        {...etc}
-      />
+      <Switcher data-testid="input" tag={tag} disabled={disabled} name={name} {...etc} />
       {label && <label htmlFor={name}>{label}</label>}
-      <Text fontSize={0} fontWeight={0} mb={1} className="hint" css={{ display: 'none' }}>
-        {errorMessage}
-      </Text>
-      {tag === 'select' && (!isLoading || disabled) && (
+      {tag === 'select' && (
         <FaSortDown size={16} style={{ opacity: 0.25 }} className="input__right" />
       )}
-      {isLoading && !disabled && (
-        <Flex aria-hidden="true" className="input__right">
-          <Spinner color="primary" />
-        </Flex>
-      )}
-      {!isLoading && iconRight && (
+      {iconRight && (
         <Flex aria-hidden="true" className="input__right">
           {iconRight}
         </Flex>

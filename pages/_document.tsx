@@ -21,6 +21,10 @@ export default class AppDocument extends Document {
           <meta name="apple-mobile-web-app-status-bar-style" content="#2D323D" />
           <meta name="theme-color" content="#2D323D" />
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+          ></link>
         </Head>
         <body>
           <Main />

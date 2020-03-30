@@ -1,18 +1,19 @@
 import React from 'react';
-import App from 'next/app';
-import { Layout } from '../components';
+import { ThemeProvider } from 'emotion-theming';
+import { NextSeo } from 'next-seo';
 
-class AppComponent extends App {
-  render() {
-    const { Component, pageProps } = this.props;
-    return (
-      <>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </>
-    );
-  }
-}
+import theme, { GlobalStyles } from '../theme';
+import { OrganizationLd, config } from '../seo';
+import { ModalProvider } from '../context';
 
+const AppComponent = ({ Component, pageProps }: { Component: any; pageProps: any }) => (
+  <ModalProvider>
+    <NextSeo {...config} />
+    <OrganizationLd />
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <Component {...pageProps} />
+    </ThemeProvider>
+  </ModalProvider>
+);
 export default AppComponent;

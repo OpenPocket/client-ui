@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react';
 import ReactModal, { Props as ReactModalProps } from 'react-modal';
 import { MdClose } from 'react-icons/md';
-import { rgba } from 'polished';
 import { useModalContext } from '../context';
 ReactModal.setAppElement('body');
 
@@ -52,7 +51,7 @@ export const Modal = ({
           ...(style && style.content),
         },
         overlay: {
-          background: rgba('#000', 0.5),
+          background: 'rgba(0, 0, 0, 0.5)',
           position: 'fixed',
           top: 0,
           left: 0,

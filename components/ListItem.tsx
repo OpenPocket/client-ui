@@ -1,11 +1,6 @@
 import React from 'react';
 import { Box } from 'rebass';
-import styled from '@emotion/styled';
 
-const Wrapper = styled(Box)`
-  display: grid;
-  grid-template-columns: 1fr 5rem 6rem 4rem;
-`;
 export type ListItemProps = {
   name?: string;
   value?: number;
@@ -14,16 +9,24 @@ export type ListItemProps = {
   index: number;
 };
 
+const RowProps = {
+  fontSize: [1, 2],
+  p: [2, 3],
+};
 export const ListItem = ({ name = 'No Name', value = 0, date, days, index }: ListItemProps) => (
-  <Wrapper
+  <Box
     className="item"
     role="button"
     tabIndex={0}
-    // css={{ background: index % 2 === 0 && 'rgba(0, 0, 0, 0.1)' }}
+    bg={index % 2 === 0 ? 'gray100' : ''}
+    css={{
+      display: 'grid',
+      gridTemplateColumns: '1fr 5rem 6rem 4rem',
+    }}
   >
-    <Box>{name}</Box>
-    <Box>{value}</Box>
-    <Box>{date}</Box>
-    <Box>{days}</Box>
-  </Wrapper>
+    <Box {...RowProps}>{name}</Box>
+    <Box {...RowProps}>{value}</Box>
+    <Box {...RowProps}>{date}</Box>
+    <Box {...RowProps}>{days}</Box>
+  </Box>
 );

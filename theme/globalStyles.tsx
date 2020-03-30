@@ -4,28 +4,14 @@ import emotionNormalize from 'emotion-normalize';
 
 const styles = (theme: import('../theme').themeProptypes): SerializedStyles => css`
   ${emotionNormalize};
-  @font-face {
-    font-family: 'Cerebri Sans';
-    src: url('./fonts/cerebri-sans.woff2') format('woff2'),
-      url('./fonts/cerebri-sans.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'neuzeit-grotesk';
-    src: url('./fonts/l') format('woff2'), url('./fonts/d.woff') format('woff'),
-      url('./fonts/a') format('opentype');
-    font-display: auto;
-    font-weight: 700;
-    font-style: normal;
-  }
   body,
   html,
   #__next {
     height: 100%;
-    font: normal normal normal 1rem ${theme.fonts.body};
-    color: ${theme.colors.gray300};
+    font: normal ${theme.fontWeights[0]} normal 1rem ${theme.fonts.body};
+    color: ${theme.colors.blue200};
     position: relative;
+    background-color: ${theme.colors.blue100};
   }
   .container {
     max-width: 1200px;
