@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { ModalProvider } from '../index';
+import { ModalProvider } from '../context';
 
 export const Layout = ({
   children,

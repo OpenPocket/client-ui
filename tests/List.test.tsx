@@ -1,7 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { List } from './List';
-import { ListItemProps } from './ListItem';
+import { ListItemProps, List } from '../components';
 
 const createNItems = (n: number): ListItemProps[] =>
   new Array(n).fill(0).map((_, i) => ({

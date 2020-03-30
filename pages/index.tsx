@@ -1,5 +1,5 @@
 import React from 'react';
-import { List, ListItemProps } from '../../components';
+import { List, ListItemProps } from '../components';
 
 const createNItems = (n: number): ListItemProps[] =>
   new Array(n).fill(0).map((_, i) => ({

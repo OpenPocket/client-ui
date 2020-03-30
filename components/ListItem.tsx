@@ -19,7 +19,7 @@ export const ListItem = ({ name = 'No Name', value = 0, date, days, index }: Lis
     className="item"
     role="button"
     tabIndex={0}
-    css={{ background: index % 2 === 0 && 'rgba(0, 0, 0, 0.1)' }}
+    // css={{ background: index % 2 === 0 && 'rgba(0, 0, 0, 0.1)' }}
   >
     <Box>{name}</Box>
     <Box>{value}</Box>
