@@ -19,8 +19,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "type-check:watch": "tsc -p ./ --watch",
-    "type-check": "tsc -p ./",
-    "storybook": "start-storybook -s ./public -p 9001"
+    "type-check": "tsc -p ./"
   },
   "husky": {
     "hooks": {
@@ -32,9 +31,6 @@
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "@next/bundle-analyzer": "^9.3.3",
-    "@storybook/addon-actions": "^5.3.17",
-    "@storybook/addon-links": "^5.3.17",
-    "@storybook/react": "^5.3.17",
     "axios": "^0.19.0",
     "babel-preset-react-app": "^9.1.2",
     "emotion-normalize": "^10.1.0",
@@ -47,10 +43,7 @@
     "react-dom": "16.9.0",
     "react-icons": "^3.8.0",
     "react-modal": "^3.11.2",
-    "react-multi-carousel": "^2.5.3",
-    "react-player": "^1.15.3",
     "react-text-mask": "^5.4.3",
-    "react-visibility-sensor": "^5.1.1",
     "rebass": "^4.0.7",
     "text-mask-addons": "^3.8.0"
   },
@@ -63,7 +56,6 @@
     "@types/react": "^16.9.27",
     "@types/react-modal": "^3.10.5",
     "@types/react-text-mask": "^5.4.6",
-    "@types/react-visibility-sensor": "^5.0.1",
     "@types/rebass": "^4.0.4",
     "@typescript-eslint/eslint-plugin": "^2.25.0",
     "@typescript-eslint/parser": "^2.25.0",
